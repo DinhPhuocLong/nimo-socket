@@ -6343,3 +6343,252 @@ WebDriver BiDi listening on ws://127.0.0.1:53959
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofiles6DuQZ\\search.json.mozlz4", (void 0)))
 DevTools listening on ws://127.0.0.1:53959/devtools/browser/e9d9d5fb-5fc8-432b-97f7-a5842b04f103
 1662817270081	Marionette	INFO	Stopped listening on port 53968
+1662817330263	geckodriver	INFO	Listening on 127.0.0.1:54004
+1662817334285	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "54005" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofile1YeAqc"
+1662817334608	Marionette	INFO	Marionette enabled
+1662817334612	Marionette	INFO	Listening on port 54015
+Read port: 54015
+WebDriver BiDi listening on ws://127.0.0.1:54005
+1662817334715	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofile1YeAqc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54005/devtools/browser/fadc68b8-ec40-49a1-b5c6-4bf281ee5981
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: , line 0: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662817743349	geckodriver	INFO	Listening on 127.0.0.1:54322
+1662817747227	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "54323" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofilejhsWGk"
+1662817747523	Marionette	INFO	Marionette enabled
+1662817747526	Marionette	INFO	Listening on port 54333
+Read port: 54333
+WebDriver BiDi listening on ws://127.0.0.1:54323
+1662817747611	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofilejhsWGk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54323/devtools/browser/54f5bdae-8c0e-46c8-a327-815f05d45046
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662817806194	Marionette	INFO	Stopped listening on port 54333
+[Parent 20416, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1662817867179	geckodriver	INFO	Listening on 127.0.0.1:54472
+1662817871050	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "54473" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileOZDMmz"
+1662817871351	Marionette	INFO	Marionette enabled
+1662817871355	Marionette	INFO	Listening on port 54482
+Read port: 54482
+WebDriver BiDi listening on ws://127.0.0.1:54473
+1662817871452	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileOZDMmz\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54473/devtools/browser/c6074cba-df20-4b2e-b4e0-093f2d9500e9
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662817903198	geckodriver	INFO	Listening on 127.0.0.1:54563
+1662817907010	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "54564" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileyJ0JBU"
+1662817907294	Marionette	INFO	Marionette enabled
+1662817907297	Marionette	INFO	Listening on port 54576
+Read port: 54576
+WebDriver BiDi listening on ws://127.0.0.1:54564
+1662817907382	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileyJ0JBU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54564/devtools/browser/d98a4c95-04a5-49ed-8d2d-1758c33809d7
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+Marionette threw an error: Error: permitUnload is already running for this tab.
+asyncPermitUnload@chrome://global/content/elements/browser-custom-element.js:1628:15
+permitUnload@chrome://global/content/elements/browser-custom-element.js:1671:14
+_beginRemoveTab@chrome://browser/content/tabbrowser.js:3876:40
+removeTab@chrome://browser/content/tabbrowser.js:3770:15
+closeTab@chrome://remote/content/marionette/browser.js:234:25
+GeckoDriver.prototype.close@chrome://remote/content/marionette/driver.js:2209:25
+permitUnload@chrome://global/content/elements/browser-custom-element.js:1685:21
+CanCloseWindow@chrome://browser/content/browser.js:8042:36
+WindowIsClosing@chrome://browser/content/browser.js:8071:7
+BrowserTryToCloseWindow@chrome://browser/content/browser.js:3084:22
+oncommand@chrome://browser/content/browser.xhtml:1:24
+
+1662817937726	Marionette	INFO	Stopped listening on port 54576
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662818249405	geckodriver	INFO	Listening on 127.0.0.1:54897
+1662818253333	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "54898" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofile35YVp3"
+1662818253611	Marionette	INFO	Marionette enabled
+1662818253614	Marionette	INFO	Listening on port 54907
+Read port: 54907
+WebDriver BiDi listening on ws://127.0.0.1:54898
+1662818253697	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofile35YVp3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54898/devtools/browser/bd86165b-570d-45a4-a91e-a6f3ef0a6285
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662818295893	geckodriver	INFO	Listening on 127.0.0.1:54997
+1662818299768	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "54998" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileagRVOB"
+1662818300052	Marionette	INFO	Marionette enabled
+1662818300055	Marionette	INFO	Listening on port 55014
+Read port: 55014
+WebDriver BiDi listening on ws://127.0.0.1:54998
+1662818300152	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileagRVOB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54998/devtools/browser/0750fff0-9715-4bdd-933f-88646a172039
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662818327020	geckodriver	INFO	Listening on 127.0.0.1:55098
+1662818330923	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "55099" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileb1E5Eg"
+1662818331206	Marionette	INFO	Marionette enabled
+1662818331209	Marionette	INFO	Listening on port 55110
+Read port: 55110
+WebDriver BiDi listening on ws://127.0.0.1:55099
+1662818331294	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileb1E5Eg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55099/devtools/browser/80e0ac98-3331-4c0b-a350-82754a60a45c
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662818364373	geckodriver	INFO	Listening on 127.0.0.1:55188
+1662818368206	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "55189" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofilerHqJ7A"
+1662818368501	Marionette	INFO	Marionette enabled
+1662818368505	Marionette	INFO	Listening on port 55199
+Read port: 55199
+WebDriver BiDi listening on ws://127.0.0.1:55189
+1662818368591	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofilerHqJ7A\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55189/devtools/browser/55663a0b-ab98-4d83-9e6d-0d3e82ecbb8b
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: , line 0: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: , line 0: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: , line 0: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+1662818543124	geckodriver	INFO	Listening on 127.0.0.1:55367
+1662818547003	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "55368" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofile4JIFxN"
+1662818547313	Marionette	INFO	Marionette enabled
+1662818547316	Marionette	INFO	Listening on port 55381
+Read port: 55381
+WebDriver BiDi listening on ws://127.0.0.1:55368
+1662818547416	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofile4JIFxN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55368/devtools/browser/54cd6474-b775-4709-bec3-7b986bf87042
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.aff8989468204b679acb.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662818564052	Marionette	INFO	Stopped listening on port 55381

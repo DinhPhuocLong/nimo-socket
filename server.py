@@ -7,6 +7,8 @@ import time
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 import pickle
 import json
@@ -105,14 +107,13 @@ def openNewTab(driver, lives):
             driver.switch_to.new_window('tab')
             driver.get(lives[i])
             checkIfLiveHasEgg(driver, lives[i])
-            driver.close()
             i += 1
         if len(lives) == i:
             i = 0
 
 
 def checkIfLiveHasEgg(driver, live):
-    sleep(2)
+    WebDriverWait(driver, 4).until(EC.presence_of_all_elements_located((By.CLASS_NAME, "chat-input-wrapper")))
     script = '''
             const boxGift = document.querySelector('.nimo-box-gift__box');
             if(boxGift) return true;
@@ -120,7 +121,8 @@ def checkIfLiveHasEgg(driver, live):
     result = driver.execute_script(script)
     if result:
         LIVES_HAVE_EGG.append({"link": live, "quantity": 5})
-    return result
+
+    driver.close()
 
 
 Thread(target=initBrowser).start()
