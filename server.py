@@ -13,8 +13,13 @@ import json
 
 
 LIVES_HAVE_EGG = []
+ACCOUNTS = []
+
+# read cookies.jon and append to ACCOUNTS + quantity
 with open('cookies.json', 'r') as f:
-    ACCOUNTS = json.load(f)
+    data = json.load(f)
+    for acc in data:
+        ACCOUNTS.append({"account": acc, "quantity": 5})
 
 
 def generateRandom():
@@ -25,6 +30,7 @@ def initBrowser():
     driver = webdriver.Firefox()
     driver.get("https://www.nimo.tv/lives")
     print('start browser...')
+    print(ACCOUNTS)
     get_site_info(driver)
     readLiveUrl(driver)
 
@@ -43,7 +49,7 @@ def readLiveUrl(driver):
     liveUrls = driver.find_elements(By.CSS_SELECTOR, ".nimo-rc_meta__info .controlZindexMargin")
     for url in liveUrls:
         lives.append(url.get_attribute('href'))
-    openNewTab(driver, ['https://www.nimo.tv/tomcute', 'https://www.nimo.tv/tomcute', 'https://www.nimo.tv/tomcute', 'https://www.nimo.tv/tomcute'])
+    openNewTab(driver, lives)
 
 
 def openNewTab(driver, lives):
@@ -54,7 +60,7 @@ def openNewTab(driver, lives):
             driver.switch_to.new_window('tab')
             driver.get(lives[i])
             checkIfLiveHasEgg(driver, lives[i])
-            # driver.close()
+            driver.close()
             i += 1
         if len(lives) == i:
             i = 0
@@ -68,7 +74,7 @@ def checkIfLiveHasEgg(driver, live):
     '''
     result = driver.execute_script(script)
     if result:
-        LIVES_HAVE_EGG.append(live)
+        LIVES_HAVE_EGG.append({"link": live, "quantity": 5})
     return result
 
 
@@ -82,16 +88,11 @@ def listener(client, address):
         clients.add(client)
     try:
         while True:
-            if LIVES_HAVE_EGG:
-                print('Find egg, sending to client and wait for reply...')
-                link = LIVES_HAVE_EGG[0]
-                account = ACCOUNTS[0]
-                data = json.dumps({"link": link, "account": account})
-                data_encode = data.encode('utf-8')
-                client.send(data_encode)
-                LIVES_HAVE_EGG.pop()
-            time.sleep(2)
-
+            data = client.recv(10024)
+            data = data.decode()
+            print(busy_client)
+            if data == 'done':
+                busy_client.remove(client)
     finally:
         with clients_lock:
             clients.remove(client)
@@ -101,21 +102,36 @@ def listener(client, address):
 clients = set()
 clients_lock = threading.Lock()
 all_clients = []
+busy_client = []
 
 
-# def controlSocket():
-#     global all_clients
-#     while True:
-#         if len(all_clients) == 3:
-#             data = 'ok'
-#             all_clients[0].send(data.encode('utf-8'))
-#
-#
-# Thread(target=controlSocket).start()
+def controlSocket():
+    global all_clients
+    while True:
+        if LIVES_HAVE_EGG:
+            for live in LIVES_HAVE_EGG:
+                print(LIVES_HAVE_EGG)
+                print(busy_client)
+                sleep(4)
+                if live["quantity"]:
+                    for c in all_clients:
+                        try:
+                            if c not in busy_client:
+                                data = live["link"]
+                                c.send(data.encode('utf-8'))
+                                busy_client.append(c)
+                                live["quantity"] -= 1
+                        except:
+                            continue
+                else:
+                    LIVES_HAVE_EGG.remove(live)
+
+
+Thread(target=controlSocket).start()
 
 
 host = '127.0.0.1'  # it gets ip of lan
-port = 9981
+port = 9991
 
 s = socket.socket()
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
