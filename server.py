@@ -7,8 +7,6 @@ import time
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 import pickle
 import json
@@ -16,12 +14,14 @@ import json
 
 LIVES_HAVE_EGG = []
 ACCOUNTS = []
+EDITABLE_ACCOUNTS = []
 
 # read cookies.jon and append to ACCOUNTS + quantity
 with open('cookies.json', 'r') as f:
     data = json.load(f)
-    for acc in data:
-        ACCOUNTS.append({"account": acc, "quantity": 5})
+    for index, acc in enumerate(data):
+        ACCOUNTS.append({"id": index, "account": acc})
+        EDITABLE_ACCOUNTS.append({"id": index, "account": acc, "quantity": 5})
 
 
 def generateRandom():
@@ -77,7 +77,6 @@ def initBrowser():
     driver = webdriver.Firefox(firefox_profile=profile)
     driver.get("https://www.nimo.tv/lives")
     print('start browser...')
-    print(ACCOUNTS)
     get_site_info(driver)
     readLiveUrl(driver)
 
@@ -113,7 +112,7 @@ def openNewTab(driver, lives):
 
 
 def checkIfLiveHasEgg(driver, live):
-    WebDriverWait(driver, 4).until(EC.presence_of_all_elements_located((By.CLASS_NAME, "chat-input-wrapper")))
+    sleep(7)
     script = '''
             const boxGift = document.querySelector('.nimo-box-gift__box');
             if(boxGift) return true;
@@ -150,6 +149,7 @@ clients = set()
 clients_lock = threading.Lock()
 all_clients = []
 busy_client = []
+busy_cookies = []
 
 
 def controlSocket():
@@ -157,17 +157,20 @@ def controlSocket():
     while True:
         if LIVES_HAVE_EGG:
             for live in LIVES_HAVE_EGG:
-                print(LIVES_HAVE_EGG)
-                print(busy_client)
                 sleep(4)
                 if live["quantity"]:
-                    for c in all_clients:
+                    for i, c in enumerate(all_clients):
                         try:
                             if c not in busy_client:
-                                data = live["link"]
-                                c.send(data.encode('utf-8'))
-                                busy_client.append(c)
+                                link = live["link"]
+                                account = EDITABLE_ACCOUNTS[i]["account"]
+                                id = EDITABLE_ACCOUNTS[i]["id"]
+                                data = json.dumps({"link": link, "account": account, "id": id})
+                                data_encode = data.encode('utf-8')
+                                client.send(data_encode)
                                 live["quantity"] -= 1
+                                EDITABLE_ACCOUNTS[i]["quantity"] -= 1
+                                busy_client.append(c)
                         except:
                             continue
                 else:

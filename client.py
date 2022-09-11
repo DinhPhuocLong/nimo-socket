@@ -9,54 +9,55 @@ import json
 
 LIVE = None
 COOKIE = None
-# driver = webdriver.Firefox()
-# def initBrowser():
-#     driver.get("https://www.nimo.tv/lives")
-#     print('start browser...')
-#     get_site_info()
-#
-#
-# def get_site_info():
-#     print('URL:', driver.current_url)
-#     print('Title:', driver.title)
-#     now = datetime.now()
-#     current_time = now.strftime("%H:%M:%S")
-#     print('thời gian bắt đầu chạy: ' + current_time)
-#
-#
-# def loginUsingCookies():
-#     driver.delete_all_cookies()
-#     for cookie in COOKIE["cookies"]:
-#         cookie.pop('sameSite')
-#         driver.add_cookie(cookie)
-#     driver.refresh()
-#
-#
-# def openLiveInNewTab(url):
-#     driver.switch_to.new_window('tab')
-#     driver.get(url)
-#     collectEggs()
-#
-#
-# def collectEggs():
-#     script = "let button = document.querySelector('.pl-icon_danmu_open');" \
-#              "if(button) button.click();" \
-#              "collectInterval = setInterval(function(){" \
-#              "const boxGift = document.querySelector('.nimo-box-gift__box');" \
-#              "const collectBtn = document.querySelector('.nimo-box-gift__box__btn');" \
-#              "let isBoxGift = document.querySelector('.nimo-room__chatroom__box-gift-item');" \
-#              "if(!boxGift) window.close();" \
-#              "if(collectBtn) collectBtn.click();" \
-#              "if(window.getComputedStyle(isBoxGift).display == 'none') window.close();" \
-#              "}, 1);"
-#
-#     driver.execute_script(script)
-
-#
-# # wait for server
+driver = webdriver.Firefox()
+def initBrowser():
+    driver.get("https://www.nimo.tv/lives")
+    print('start browser...')
+    get_site_info()
 
 
-# initBrowser()
+def get_site_info():
+    print('URL:', driver.current_url)
+    print('Title:', driver.title)
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    print('thời gian bắt đầu chạy: ' + current_time)
+
+
+def loginUsingCookies():
+    driver.delete_all_cookies()
+    for cookie in COOKIE["cookies"]:
+        cookie.pop('sameSite')
+        driver.add_cookie(cookie)
+    driver.refresh()
+
+
+def openLiveInNewTab(url):
+    driver.switch_to.new_window('tab')
+    driver.get(url)
+    sleep(5)
+    collectEggs()
+
+
+def collectEggs():
+    script = "let button = document.querySelector('.pl-icon_danmu_open');" \
+             "if(button) button.click();" \
+             "collectInterval = setInterval(function(){" \
+             "const boxGift = document.querySelector('.nimo-box-gift__box');" \
+             "const collectBtn = document.querySelector('.nimo-box-gift__box__btn');" \
+             "let isBoxGift = document.querySelector('.nimo-room__chatroom__box-gift-item');" \
+             "if(!boxGift) window.close();" \
+             "if(collectBtn) collectBtn.click();" \
+             "if(window.getComputedStyle(isBoxGift).display == 'none') window.close();" \
+             "}, 1);"
+
+    driver.execute_script(script)
+
+
+# wait for server
+
+
+initBrowser()
 
 
 s = socket.socket()
@@ -68,19 +69,24 @@ print(f'connected to {host}:{port}')
 s.connect((host, port))
 
 while True:
-    data = s.recv(10024)
+    data = s.recv(160000)
     data = data.decode()
-    print(data)
-    # sleep(40)
-    # rep = 'done'
-    # s.send(rep.encode())
+    data = json.loads(data)
+    LIVE = data['link']
+    COOKIE = data['account']
+    loginUsingCookies()
+    openLiveInNewTab(LIVE)
+
+    # print(data)
+    # # sleep(40)
+    # # rep = 'done'
+    # # s.send(rep.encode())
     # try:
     #     data = json.loads(data)
     #     LIVE = data['link']
     #     COOKIE = data['account']
-    #     if COOKIE and LIVE:
-    #         loginUsingCookies()
-    #         openLiveInNewTab(LIVE)
+    #     print(LIVE)
+    #     print(COOKIE)
     # except:
     #     print(data)
 
