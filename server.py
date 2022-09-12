@@ -12,7 +12,7 @@ import pickle
 import json
 
 
-LIVES_HAVE_EGG = []
+LIVES_HAVE_EGG = [{"link": "https://www.nimo.tv/thaygiaoba", "quantity": 5}, {"link": "https://www.nimo.tv/thaygiaoba", "quantity": 5}]
 ACCOUNTS = []
 EDITABLE_ACCOUNTS = []
 
@@ -20,8 +20,7 @@ EDITABLE_ACCOUNTS = []
 with open('cookies.json', 'r') as f:
     data = json.load(f)
     for index, acc in enumerate(data):
-        ACCOUNTS.append({"id": index, "account": acc})
-        EDITABLE_ACCOUNTS.append({"id": index, "account": acc, "quantity": 5})
+        ACCOUNTS.append({"id": index, "account": acc, "quantity": 1})
 
 
 def generateRandom():
@@ -117,10 +116,11 @@ def checkIfLiveHasEgg(driver, live):
             const boxGift = document.querySelector('.nimo-box-gift__box');
             if(boxGift) return true;
     '''
+
     result = driver.execute_script(script)
     if result:
-        LIVES_HAVE_EGG.append({"link": live, "quantity": 5})
-
+        if live not in LIVES_HAVE_EGG:
+            LIVES_HAVE_EGG.append({"link": live, "quantity": 5})
     driver.close()
 
 
@@ -136,9 +136,15 @@ def listener(client, address):
         while True:
             data = client.recv(10024)
             data = data.decode()
-            print(busy_client)
-            if data == 'done':
-                busy_client.remove(client)
+            condition = data.split("|")
+            if condition[0] == "done":
+                if client in busy_client:
+                    print("có")
+                    busy_client.remove(client)
+                    print(busy_client)
+    except:
+        print("Disconnected connection from: ", address)
+        all_clients.remove(client)
     finally:
         with clients_lock:
             clients.remove(client)
@@ -157,22 +163,25 @@ def controlSocket():
     while True:
         if LIVES_HAVE_EGG:
             for live in LIVES_HAVE_EGG:
-                sleep(4)
-                if live["quantity"]:
-                    for i, c in enumerate(all_clients):
-                        try:
-                            if c not in busy_client:
-                                link = live["link"]
-                                account = EDITABLE_ACCOUNTS[i]["account"]
-                                id = EDITABLE_ACCOUNTS[i]["id"]
-                                data = json.dumps({"link": link, "account": account, "id": id})
-                                data_encode = data.encode('utf-8')
-                                client.send(data_encode)
-                                live["quantity"] -= 1
-                                EDITABLE_ACCOUNTS[i]["quantity"] -= 1
-                                busy_client.append(c)
-                        except:
-                            continue
+                sleep(1)
+                if live["quantity"] > 0:
+                    while live["quantity"] > 0:
+                        for c in all_clients:
+                            if c not in busy_client and live["quantity"] > 0:
+                                cookie = None
+                                for account in ACCOUNTS:
+                                    if account["quantity"] > 0:
+                                        cookie = account
+                                        account["quantity"] -= 1
+                                        break
+                                if cookie:
+                                    busy_client.append(c)
+                                    msg = json.dumps({"id": cookie["id"], "link": live["link"], "account": cookie["account"]})
+                                    data_encode = msg.encode('utf-8')
+                                    c.send(data_encode)
+                                    live["quantity"] -= 1
+                                else:
+                                    print("i dont know what to do here (:")
                 else:
                     LIVES_HAVE_EGG.remove(live)
 
@@ -181,7 +190,7 @@ Thread(target=controlSocket).start()
 
 
 host = '127.0.0.1'  # it gets ip of lan
-port = 9991
+port = 9661
 
 s = socket.socket()
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
