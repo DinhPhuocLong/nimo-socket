@@ -67,7 +67,7 @@ initBrowser()
 
 s = socket.socket()
 host = '127.0.0.1' #my server ip   103.178.234.58
-port = 9661
+port = 9991  # Production port 9981
 print(f'connected to {host}:{port}')
 
 
@@ -80,6 +80,7 @@ while True:
     print(data)
     LIVE = data['link']
     print(LIVE)
+    print(data["id"])
     COOKIE = data['account']
     loginUsingCookies()
     openLiveInNewTab(LIVE)

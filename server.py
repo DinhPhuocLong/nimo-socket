@@ -12,7 +12,7 @@ import pickle
 import json
 
 
-LIVES_HAVE_EGG = [{"link": "https://www.nimo.tv/thaygiaoba", "quantity": 5}, {"link": "https://www.nimo.tv/thaygiaoba", "quantity": 5}]
+LIVES_HAVE_EGG = []
 ACCOUNTS = []
 EDITABLE_ACCOUNTS = []
 
@@ -88,7 +88,24 @@ def get_site_info(driver):
     print('thời gian bắt đầu chạy: ' + current_time)
 
 
+def scrollToEnd(driver):
+    breakPoint = 0
+    last_height = driver.execute_script("return document.body.scrollHeight")
+    while True:
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        sleep(2)
+        new_height = driver.execute_script("return document.body.scrollHeight")
+        if new_height == last_height:
+            break
+        last_height = new_height
+        if breakPoint == 5:
+            break
+        breakPoint += 1
+
+
 def readLiveUrl(driver):
+    driver.refresh()
+    scrollToEnd(driver)
     sleep(5)
     lives = []
     liveUrls = driver.find_elements(By.CSS_SELECTOR, ".nimo-rc_meta__info .controlZindexMargin")
@@ -106,8 +123,9 @@ def openNewTab(driver, lives):
             driver.get(lives[i])
             checkIfLiveHasEgg(driver, lives[i])
             i += 1
-        if len(lives) == i:
-            i = 0
+        if i == 2:
+            driver.switch_to.window(driver.window_handles[0])
+            readLiveUrl(driver)
 
 
 def checkIfLiveHasEgg(driver, live):
@@ -139,9 +157,8 @@ def listener(client, address):
             condition = data.split("|")
             if condition[0] == "done":
                 if client in busy_client:
-                    print("có")
                     busy_client.remove(client)
-                    print(busy_client)
+                    ACCOUNTS[int(condition[1])]["quantity"] += 1
     except:
         print("Disconnected connection from: ", address)
         all_clients.remove(client)
@@ -170,6 +187,7 @@ def controlSocket():
                             if c not in busy_client and live["quantity"] > 0:
                                 cookie = None
                                 for account in ACCOUNTS:
+                                    print(account["quantity"], '-----------------------', account["id"])
                                     if account["quantity"] > 0:
                                         cookie = account
                                         account["quantity"] -= 1
@@ -190,7 +208,7 @@ Thread(target=controlSocket).start()
 
 
 host = '127.0.0.1'  # it gets ip of lan
-port = 9661
+port = 9991
 
 s = socket.socket()
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
