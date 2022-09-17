@@ -10,18 +10,39 @@ from selenium.webdriver.common.by import By
 from time import sleep
 import pickle
 import json
+import glob
 
 
 LIVES_HAVE_EGG = []
 ACCOUNTS = []
 EDITABLE_ACCOUNTS = []
+room_participants = input("Số lượng account tham gia room: ")
+country = input("Nhập vùng cần chạy('vn', 'gl', 'ind', 'tr', 'mr'): ")
+chooseLink = input("all - nimoshow - gta5 - lol - pugb - pugbm - csgo - luachua: ")
+if chooseLink == "all":
+    url = "https://www.nimo.tv/lives"
+if chooseLink == "nimoshow":
+    url = "https://www.nimo.tv/game/185"
+if chooseLink == "gta5":
+    url = "https://www.nimo.tv/game/gta5"
+if chooseLink == "lol":
+    url = "https://www.nimo.tv/game/lol"
+if chooseLink == "pubg":
+    url = "https://www.nimo.tv/game/pubg"
+if chooseLink == "pubgm":
+    url = "https://www.nimo.tv/game/PUBGM"
+if chooseLink == "csgo":
+    url = "https://www.nimo.tv/game/csgo"
+if chooseLink == "freefire":
+    url = "https://www.nimo.tv/game/freefire"
+if chooseLink == "":
+    url = "https://www.nimo.tv/lives"
 
-# read cookies.jon and append to ACCOUNTS + quantity
-with open('cookies.json', 'r') as f:
-    data = json.load(f)
-    for index, acc in enumerate(data):
-        ACCOUNTS.append({"id": index, "account": acc, "quantity": 1})
-
+all_cookies = glob.glob("cookies/*")
+for index, file in enumerate(all_cookies):
+    with open(file, 'r') as f:
+        data = json.load(f)
+        ACCOUNTS.append({"id": index, "account": data, "quantity": 1})
 
 def generateRandom():
     return random.randint(1, 10)
@@ -75,8 +96,10 @@ def initBrowser():
     # Start the Firefox browser with custom settings
     driver = webdriver.Firefox(firefox_profile=profile)
     driver.get("https://www.nimo.tv/lives")
+    Thread(target=reset, args=[driver]).start()
     print('start browser...')
     get_site_info(driver)
+    chooseCountry(driver)
     readLiveUrl(driver)
 
 
@@ -88,7 +111,49 @@ def get_site_info(driver):
     print('thời gian bắt đầu chạy: ' + current_time)
 
 
+def chooseCountry(driver):
+    driver.maximize_window()
+    sleep(3)
+    chooseCountryButton = driver.find_elements(By.CLASS_NAME, "nimo-header-country-flag")
+    chooseCountryButton[0].click()
+    script = "let listCountry = document.querySelectorAll('.CountryList__item');" \
+             "let c = '" + country + "';"
+    script += "listCountry.forEach(country => {" \
+              "attr = country.getAttribute('title');" \
+              "switch (c) {" \
+              "case 'vn':" \
+              "if ((attr === 'Việt nam') || (attr === 'Vietnam')) {" \
+              " country.click();" \
+              " };" \
+              "break;" \
+              "case 'gl':" \
+              "if ((attr === 'Toàn cầu') || (attr === 'Global')) {" \
+              "country.click();" \
+              " };" \
+              "break;" \
+              "case 'tr':" \
+              "if ((attr === 'Thổ Nhĩ Kỳ') || (attr === 'Turkey')) {" \
+              "country.click();" \
+              " };" \
+              "break;" \
+              "case 'mr':" \
+              "if ((attr === 'Ma-rốc') || (attr === 'Morocco')) {" \
+              "country.click();" \
+              " };" \
+              "case 'ind':" \
+              "if ((attr === 'Indonesia') || (attr === 'Indonesia')) {" \
+              "country.click();" \
+              " };" \
+              "break;" \
+              " };" \
+              "" \
+              "});"
+    driver.execute_script(script)
+    sleep(4)
+
+
 def scrollToEnd(driver):
+    chooseCountry(driver)
     breakPoint = 0
     last_height = driver.execute_script("return document.body.scrollHeight")
     while True:
@@ -104,7 +169,8 @@ def scrollToEnd(driver):
 
 
 def readLiveUrl(driver):
-    driver.refresh()
+    global url
+    driver.get(url)
     scrollToEnd(driver)
     sleep(5)
     lives = []
@@ -123,7 +189,7 @@ def openNewTab(driver, lives):
             driver.get(lives[i])
             checkIfLiveHasEgg(driver, lives[i])
             i += 1
-        if i == 2:
+        if i == len(lives) - 1:
             driver.switch_to.window(driver.window_handles[0])
             readLiveUrl(driver)
 
@@ -137,9 +203,55 @@ def checkIfLiveHasEgg(driver, live):
 
     result = driver.execute_script(script)
     if result:
-        if live not in LIVES_HAVE_EGG:
-            LIVES_HAVE_EGG.append({"link": live, "quantity": 5})
+        r = any(l["link"] == live for l in LIVES_HAVE_EGG)
+        if not r:
+            LIVES_HAVE_EGG.append({"link": live, "quantity": int(room_participants) or 5})
     driver.close()
+
+
+def reset(driver):
+    reset = input('---------------- Reset Server ??? ----------------: ')
+    global room_participants, country, chooseLink, url
+    if reset:
+        try:
+            print("Server is restarting!!!!!!!!!!!!!!!!!!")
+            driver.quit()
+            room_participants = input("Số lượng account tham gia room: ")
+            country = input("Nhập vùng cần chạy('vn', 'gl', 'ind', 'tr', 'mr'): ")
+            chooseLink = input("all - nimoshow - gta5 - lol - pugb - pugbm - csgo - luachua: ")
+            if chooseLink == "all":
+                url = "https://www.nimo.tv/lives"
+            if chooseLink == "nimoshow":
+                url = "https://www.nimo.tv/game/185"
+            if chooseLink == "gta5":
+                url = "https://www.nimo.tv/game/gta5"
+            if chooseLink == "lol":
+                url = "https://www.nimo.tv/game/lol"
+            if chooseLink == "pubg":
+                url = "https://www.nimo.tv/game/pubg"
+            if chooseLink == "pubgm":
+                url = "https://www.nimo.tv/game/PUBGM"
+            if chooseLink == "csgo":
+                url = "https://www.nimo.tv/game/csgo"
+            if chooseLink == "freefire":
+                url = "https://www.nimo.tv/game/freefire"
+            if chooseLink == "":
+                url = "https://www.nimo.tv/lives"
+            LIVES_HAVE_EGG.clear()
+            ACCOUNTS.clear()
+            busy_client.clear()
+            for index, file in enumerate(all_cookies):
+                with open(file, 'r') as f:
+                    data = json.load(f)
+                    ACCOUNTS.append({"id": index, "account": data, "quantity": 1})
+            initBrowser()
+
+        except:
+            pass
+
+
+
+
 
 
 Thread(target=initBrowser).start()
@@ -172,7 +284,6 @@ clients = set()
 clients_lock = threading.Lock()
 all_clients = []
 busy_client = []
-busy_cookies = []
 
 
 def controlSocket():
@@ -187,7 +298,6 @@ def controlSocket():
                             if c not in busy_client and live["quantity"] > 0:
                                 cookie = None
                                 for account in ACCOUNTS:
-                                    print(account["quantity"], '-----------------------', account["id"])
                                     if account["quantity"] > 0:
                                         cookie = account
                                         account["quantity"] -= 1
@@ -207,8 +317,8 @@ def controlSocket():
 Thread(target=controlSocket).start()
 
 
-host = '127.0.0.1'  # it gets ip of lan
-port = 9991
+host = '0.0.0.0'  # it gets ip of lan
+port = 9981
 
 s = socket.socket()
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)

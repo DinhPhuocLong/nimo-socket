@@ -66,8 +66,8 @@ initBrowser()
 
 
 s = socket.socket()
-host = '127.0.0.1' #my server ip   103.178.234.58
-port = 9991  # Production port 9981
+host = '103.178.234.58' #my server ip   103.178.234.58
+port = 9981  # Production port 9981
 print(f'connected to {host}:{port}')
 
 
@@ -77,7 +77,6 @@ while True:
     data = s.recv(20024)
     data = data.decode()
     data = json.loads(data)
-    print(data)
     LIVE = data['link']
     print(LIVE)
     print(data["id"])
@@ -87,7 +86,6 @@ while True:
     while True:
         if FLAG and len(driver.window_handles) == 1:
             driver.switch_to.window(driver.window_handles[0])
-            print("bủ bủ lmao")
             responseToServer = f'done|{data["id"]}'
             s.send(responseToServer.encode())
             FLAG = False
