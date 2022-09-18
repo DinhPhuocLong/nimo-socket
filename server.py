@@ -310,8 +310,7 @@ def controlSocket():
                                     data_encode = msg.encode('utf-8')
                                     c.send(data_encode)
                                     live["quantity"] -= 1
-                                else:
-                                    print("i dont know what to do here (:")
+
                 else:
                     LIVES_HAVE_EGG.remove(live)
 
