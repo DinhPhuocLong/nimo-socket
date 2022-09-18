@@ -273,6 +273,8 @@ def listener(client, address):
                     ACCOUNTS[int(condition[1])]["quantity"] += 1
     except:
         print("Disconnected connection from: ", address)
+        if client in busy_client:
+            busy_client.remove(client)
         all_clients.remove(client)
     finally:
         with clients_lock:
