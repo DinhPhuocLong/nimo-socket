@@ -19,24 +19,25 @@ EDITABLE_ACCOUNTS = []
 room_participants = input("Số lượng account tham gia room: ")
 country = input("Nhập vùng cần chạy('vn', 'gl', 'ind', 'tr', 'mr'): ")
 chooseLink = input("all - nimoshow - gta5 - lol - pugb - pugbm - csgo - luachua: ")
+defaultLink = ''
 if chooseLink == "all":
-    url = "https://www.nimo.tv/lives"
+    defaultLink = "https://www.nimo.tv/lives"
 if chooseLink == "nimoshow":
-    url = "https://www.nimo.tv/game/185"
+    defaultLink = "https://www.nimo.tv/game/185"
 if chooseLink == "gta5":
-    url = "https://www.nimo.tv/game/gta5"
+    defaultLink = "https://www.nimo.tv/game/gta5"
 if chooseLink == "lol":
-    url = "https://www.nimo.tv/game/lol"
+    defaultLink = "https://www.nimo.tv/game/lol"
 if chooseLink == "pubg":
-    url = "https://www.nimo.tv/game/pubg"
+    defaultLink = "https://www.nimo.tv/game/pubg"
 if chooseLink == "pubgm":
-    url = "https://www.nimo.tv/game/PUBGM"
+    defaultLink = "https://www.nimo.tv/game/PUBGM"
 if chooseLink == "csgo":
-    url = "https://www.nimo.tv/game/csgo"
+    defaultLink = "https://www.nimo.tv/game/csgo"
 if chooseLink == "freefire":
-    url = "https://www.nimo.tv/game/freefire"
+    defaultLink = "https://www.nimo.tv/game/freefire"
 if chooseLink == "":
-    url = "https://www.nimo.tv/lives"
+    defaultLink = "https://www.nimo.tv/lives"
 
 all_cookies = glob.glob("cookies/*")
 for index, file in enumerate(all_cookies):
@@ -169,8 +170,7 @@ def scrollToEnd(driver):
 
 
 def readLiveUrl(driver):
-    global url
-    driver.get(url)
+    driver.get(defaultLink)
     scrollToEnd(driver)
     sleep(5)
     lives = []
@@ -183,16 +183,16 @@ def readLiveUrl(driver):
 def openNewTab(driver, lives):
     i = 0
     while True:
-        driver.switch_to.window(driver.window_handles[0])
+        if i == len(lives) - 1:
+            driver.switch_to.window(driver.window_handles[0])
+            readLiveUrl(driver)
+            break
         if len(driver.window_handles) < int(2):
+            driver.switch_to.window(driver.window_handles[0])
             driver.switch_to.new_window('tab')
             driver.get(lives[i])
             checkIfLiveHasEgg(driver, lives[i])
             i += 1
-        if i == len(lives) - 1:
-            driver.switch_to.window(driver.window_handles[0])
-            readLiveUrl(driver)
-
 
 def checkIfLiveHasEgg(driver, live):
     sleep(7)
@@ -319,7 +319,7 @@ def controlSocket():
 Thread(target=controlSocket).start()
 
 
-host = '0.0.0.0'  # it gets ip of lan
+host = '127.0.0.1'  # it gets ip of lan
 port = 9981
 
 s = socket.socket()
