@@ -114,27 +114,42 @@ initBrowser()
 s = socket.socket()
 host = '127.0.0.1' #my server ip   103.178.234.58
 port = 9981  # Production port 9981
+
+s.connect((host, port))
+connected = True
 print(f'connected to {host}:{port}')
 
 
-s.connect((host, port))
-
 while True:
-    data = s.recv(20024)
-    data = data.decode()
-    data = json.loads(data)
-    LIVE = data['link']
-    print(LIVE)
-    print(data["id"])
-    COOKIE = data['account']
-    loginUsingCookies()
-    openLiveInNewTab(LIVE)
-    while True:
-        if FLAG and len(driver.window_handles) == 1:
-            driver.switch_to.window(driver.window_handles[0])
-            responseToServer = f'done|{data["id"]}'
-            s.send(responseToServer.encode())
-            FLAG = False
-            break
-
+    # attempt to send and receive wave, otherwise reconnect
+    try:
+        data = s.recv(20024)
+        data = data.decode()
+        data = json.loads(data)
+        LIVE = data['link']
+        print(LIVE)
+        print(data["id"])
+        COOKIE = data['account']
+        loginUsingCookies()
+        openLiveInNewTab(LIVE)
+        while True:
+            if FLAG and len(driver.window_handles) == 1:
+                driver.switch_to.window(driver.window_handles[0])
+                responseToServer = f'done|{data["id"]}'
+                s.send(responseToServer.encode())
+                FLAG = False
+                break
+    except socket.error:
+        # set connection status and recreate socket
+        connected = False
+        s = socket.socket()
+        print("connection lost... reconnecting")
+        while not connected:
+            # attempt to reconnect, otherwise sleep for 4 seconds
+            try:
+                s.connect((host, port))
+                connected = True
+                print("re-connection successful")
+            except socket.error:
+                sleep(4)
 s.close()
