@@ -154,19 +154,13 @@ def chooseCountry(driver):
 
 
 def scrollToEnd(driver):
-    chooseCountry(driver)
     breakPoint = 0
-    last_height = driver.execute_script("return document.body.scrollHeight")
     while True:
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        sleep(2)
-        new_height = driver.execute_script("return document.body.scrollHeight")
-        if new_height == last_height:
-            break
-        last_height = new_height
-        if breakPoint == 5:
-            break
         breakPoint += 1
+        sleep(2)
+        if breakPoint == 4 + 1:    # replace condition by inpupt ----
+            break
 
 
 def readLiveUrl(driver):
@@ -183,16 +177,20 @@ def readLiveUrl(driver):
 def openNewTab(driver, lives):
     i = 0
     while True:
-        if i == len(lives) - 1:
-            driver.switch_to.window(driver.window_handles[0])
-            readLiveUrl(driver)
-            break
-        if len(driver.window_handles) < int(2):
-            driver.switch_to.window(driver.window_handles[0])
-            driver.switch_to.new_window('tab')
-            driver.get(lives[i])
-            checkIfLiveHasEgg(driver, lives[i])
-            i += 1
+        try:
+            if i == len(lives) - 1:
+                driver.switch_to.window(driver.window_handles[0])
+                readLiveUrl(driver)
+                break
+            if len(driver.window_handles) < int(2):
+                driver.switch_to.window(driver.window_handles[0])
+                driver.switch_to.new_window('tab')
+                driver.get(lives[i])
+                checkIfLiveHasEgg(driver, lives[i])
+                i += 1
+        except:
+            continue
+
 
 def checkIfLiveHasEgg(driver, live):
     sleep(7)
@@ -267,6 +265,7 @@ def listener(client, address):
             data = client.recv(10024)
             data = data.decode()
             condition = data.split("|")
+            print(condition)
             if condition[0] == "done":
                 if client in busy_client:
                     busy_client.remove(client)
@@ -310,7 +309,8 @@ def controlSocket():
                                     data_encode = msg.encode('utf-8')
                                     c.send(data_encode)
                                     live["quantity"] -= 1
-
+                                else:
+                                    break
                 else:
                     LIVES_HAVE_EGG.remove(live)
 
