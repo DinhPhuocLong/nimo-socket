@@ -112,7 +112,7 @@ initBrowser()
 
 
 s = socket.socket()
-host = '127.0.0.1' #my server ip   103.178.234.58
+host = '103.178.234.58' #my server ip   103.178.234.58
 port = 9981  # Production port 9981
 
 s.connect((host, port))
@@ -151,5 +151,6 @@ while True:
                 connected = True
                 print("re-connection successful")
             except socket.error:
+                print('re-connection failed - sleep 4 seconds')
                 sleep(4)
 s.close()

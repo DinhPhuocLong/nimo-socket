@@ -318,7 +318,7 @@ def controlSocket():
 Thread(target=controlSocket).start()
 
 
-host = '127.0.0.1'  # it gets ip of lan
+host = '103.178.234.58'  # it gets ip of lan
 port = 9981
 
 s = socket.socket()
