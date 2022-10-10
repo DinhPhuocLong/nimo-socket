@@ -113,7 +113,7 @@ initBrowser()
 
 
 s = socket.socket()
-host = '103.178.234.58' #my server ip   103.178.234.58
+host = '103.21.52.123' #my server ip   103.178.234.58
 port = 9981  # Production port 9981
 
 s.connect((host, port))
