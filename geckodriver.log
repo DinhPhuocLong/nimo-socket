@@ -22360,3 +22360,28 @@ JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL
 JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
 JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+1665407319640	geckodriver	INFO	Listening on 127.0.0.1:65211
+1665407322686	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "65212" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileIea0fV"
+1665407323008	Marionette	INFO	Marionette enabled
+1665407323012	Marionette	INFO	Listening on port 65222
+Read port: 65222
+WebDriver BiDi listening on ws://127.0.0.1:65212
+1665407323111	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileIea0fV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:65212/devtools/browser/50f4c7f2-c2ec-43f2-b913-fa631f44a69a
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+1665407470040	Marionette	INFO	Stopped listening on port 65222
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 13124, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167

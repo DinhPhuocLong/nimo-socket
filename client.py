@@ -86,7 +86,7 @@ def openLiveInNewTab(url):
     driver.switch_to.window(driver.window_handles[0])
     driver.switch_to.new_window('tab')
     driver.get(url)
-    sleep(4)
+    sleep(8)
     collectEggs()
 
 
