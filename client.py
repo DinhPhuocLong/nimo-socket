@@ -83,6 +83,7 @@ def loginUsingCookies():
 def openLiveInNewTab(url):
     global FLAG
     FLAG = True
+    driver.switch_to.window(driver.window_handles[0])
     driver.switch_to.new_window('tab')
     driver.get(url)
     sleep(4)
@@ -130,15 +131,17 @@ while True:
         print(LIVE)
         print(data["id"])
         COOKIE = data['account']
-        loginUsingCookies()
+        if not FLAG:
+            loginUsingCookies()
         openLiveInNewTab(LIVE)
-        while True:
-            if FLAG and len(driver.window_handles) == 1:
-                driver.switch_to.window(driver.window_handles[0])
-                responseToServer = f'done|{data["id"]}'
-                s.send(responseToServer.encode())
-                FLAG = False
-                break
+
+        # while True:
+        #     if FLAG and len(driver.window_handles) == 1:
+        #         driver.switch_to.window(driver.window_handles[0])
+        #         responseToServer = f'done|{data["id"]}'
+        #         s.send(responseToServer.encode())
+        #         FLAG = False
+        #         break
     except socket.error:
         # set connection status and recreate socket
         connected = False
