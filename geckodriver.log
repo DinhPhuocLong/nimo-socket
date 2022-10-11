@@ -22385,3 +22385,337 @@ JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL
 1665407470040	Marionette	INFO	Stopped listening on port 65222
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
 [Parent 13124, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1665486487864	geckodriver	INFO	Listening on 127.0.0.1:59110
+1665486490989	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "59111" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileELCgob"
+1665486491337	Marionette	INFO	Marionette enabled
+1665486491341	Marionette	INFO	Listening on port 59120
+WebDriver BiDi listening on ws://127.0.0.1:59111
+Read port: 59120
+1665486491592	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileELCgob\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59111/devtools/browser/8669e5e9-cf2c-43ce-82cf-01837486a2db
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+1665486712164	geckodriver	INFO	Listening on 127.0.0.1:59816
+1665486715241	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "59817" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileAihxYq"
+1665486715547	Marionette	INFO	Marionette enabled
+1665486715551	Marionette	INFO	Listening on port 59826
+Read port: 59826
+WebDriver BiDi listening on ws://127.0.0.1:59817
+1665486715649	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileAihxYq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59817/devtools/browser/6849e6b9-1ac6-41d2-96a9-767aa5713bc3
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+1665486818650	geckodriver	INFO	Listening on 127.0.0.1:60209
+1665486821695	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "60210" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileYUUfWr"
+1665486822030	Marionette	INFO	Marionette enabled
+1665486822034	Marionette	INFO	Listening on port 60221
+WebDriver BiDi listening on ws://127.0.0.1:60210
+Read port: 60221
+1665486822260	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileYUUfWr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60210/devtools/browser/a1ff4619-37b5-4cc5-91c9-4d5d8146195c
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1665486893843	geckodriver	INFO	Listening on 127.0.0.1:60562
+1665486896947	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "60563" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofile6UPstY"
+1665486897277	Marionette	INFO	Marionette enabled
+1665486897281	Marionette	INFO	Listening on port 60572
+WebDriver BiDi listening on ws://127.0.0.1:60563
+Read port: 60572
+1665486897509	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofile6UPstY\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60563/devtools/browser/f3fbbc6a-8ad6-4760-8648-7c820c22ba9f
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+1665486964167	geckodriver	INFO	Listening on 127.0.0.1:60800
+1665486968452	geckodriver	INFO	Listening on 127.0.0.1:60807
+1665486971489	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "60808" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileh8wBAP"
+1665486971848	Marionette	INFO	Marionette enabled
+1665486971855	Marionette	INFO	Listening on port 60817
+Read port: 60817
+WebDriver BiDi listening on ws://127.0.0.1:60808
+1665486971999	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileh8wBAP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60808/devtools/browser/85444826-4556-4619-a9c6-5a8d95fad98c
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+1665487017846	geckodriver	INFO	Listening on 127.0.0.1:60961
+1665487020944	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "60962" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofilelLMcHz"
+1665487021235	Marionette	INFO	Marionette enabled
+1665487021239	Marionette	INFO	Listening on port 60971
+Read port: 60971
+WebDriver BiDi listening on ws://127.0.0.1:60962
+1665487021328	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofilelLMcHz\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60962/devtools/browser/9401f673-56d5-4786-b5a3-cdea7675bb87
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+1665487050114	geckodriver	INFO	Listening on 127.0.0.1:61105
+1665487053170	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "61106" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileyRw5En"
+1665487053470	Marionette	INFO	Marionette enabled
+1665487053474	Marionette	INFO	Listening on port 61115
+Read port: 61115
+WebDriver BiDi listening on ws://127.0.0.1:61106
+1665487055430	geckodriver	INFO	Listening on 127.0.0.1:61119
+1665487058533	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "61120" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofilels97BE"
+1665487058825	Marionette	INFO	Marionette enabled
+1665487058828	Marionette	INFO	Listening on port 61129
+Read port: 61129
+WebDriver BiDi listening on ws://127.0.0.1:61120
+1665487058920	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofilels97BE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61120/devtools/browser/52238b79-48b6-4b5e-80b7-b78a9027a6e8
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+1665487203272	geckodriver	INFO	Listening on 127.0.0.1:61637
+1665487206355	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "61638" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileVu5n3s"
+1665487206653	Marionette	INFO	Marionette enabled
+1665487206657	Marionette	INFO	Listening on port 61648
+Read port: 61648
+WebDriver BiDi listening on ws://127.0.0.1:61638
+1665487206747	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileVu5n3s\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61638/devtools/browser/93a9b154-910e-45b9-9c63-cbe676107552
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+1665487257148	geckodriver	INFO	Listening on 127.0.0.1:62111
+1665487260202	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "62112" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileQHp1rk"
+1665487260504	Marionette	INFO	Marionette enabled
+1665487260508	Marionette	INFO	Listening on port 62122
+Read port: 62122
+WebDriver BiDi listening on ws://127.0.0.1:62112
+1665487260608	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofileQHp1rk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:62112/devtools/browser/2886464f-0d49-443c-9394-f54ab788bdb4
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+1665487291463	geckodriver	INFO	Listening on 127.0.0.1:62311
+1665487294529	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "62312" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofilebvFrMZ"
+1665487294858	Marionette	INFO	Marionette enabled
+1665487294862	Marionette	INFO	Listening on port 62321
+WebDriver BiDi listening on ws://127.0.0.1:62312
+Read port: 62321
+1665487295081	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\dinhp\\AppData\\Local\\Temp\\rust_mozprofilebvFrMZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:62312/devtools/browser/6fbaafa9-07e4-4c9b-8f52-f670e372ab74
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL context was lost.
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript warning: https://www.nimo.tv/nms/home.spa.28458848d7ea03efdb85.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 24: TypeError: can't access property "ownerGlobal", browser is null

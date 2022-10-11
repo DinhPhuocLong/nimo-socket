@@ -83,6 +83,9 @@ def loginUsingCookies():
 def openLiveInNewTab(url):
     global FLAG
     FLAG = True
+    if len(driver.window_handles) >= 3:
+        driver.switch_to.window(driver.window_handles[1])
+        driver.close()
     driver.switch_to.window(driver.window_handles[0])
     driver.switch_to.new_window('tab')
     driver.get(url)
