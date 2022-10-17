@@ -5,6 +5,10 @@ from selenium import webdriver
 from time import sleep
 import threading
 import json
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 
 # --- init driver ---
 
@@ -62,6 +66,11 @@ def initBrowser():
     driver.get("https://www.nimo.tv/lives")
     print('start browser...')
     get_site_info()
+    try:
+        loginUsingUsernamePassword()
+    except:
+        sleep(10)
+        loginUsingUsernamePassword()
 
 
 def get_site_info():
@@ -79,10 +88,46 @@ def loginUsingCookies():
         driver.add_cookie(cookie)
     driver.refresh()
 
+def loginUsingUsernamePassword():
+    code = ""
+    username = ""
+    password = ""
+    with open("info.json", 'r') as f:
+        data = json.load(f)
+        if data["code"] == 66:
+            code = "Thailand"
+        if data["code"] == 84:
+            code = "Vietnam"
+        username = data["username"]
+        password = data["password"]
+
+    sleep(1)
+    loginButton = driver.find_element(By.XPATH, "/html/body/div[2]/div[1]/div/div[2]/div/div[2]/button")
+    loginButton.click()
+    sleep(1)
+    dropDown = driver.find_element(By.CLASS_NAME, "nimo-area-code")
+    dropDown.click()
+    sleep(1)
+    countryPath = '//div[text()="'+ code +'"]'
+    countryCode = driver.find_element(By.XPATH, countryPath)
+    countryCode.click()
+    sleep(1)
+    userName = driver.find_element(By.CLASS_NAME, "phone-number-input")
+    userName.click()
+    actions = ActionChains(driver)
+    actions.send_keys(username)
+    actions.send_keys(Keys.TAB)
+    actions.send_keys(password)
+    actions.send_keys(Keys.ENTER)
+    actions.perform()
+
 
 def openLiveInNewTab(url):
     global FLAG
     FLAG = True
+    if len(driver.window_handles) >= 3:
+        driver.switch_to.window(driver.window_handles[1])
+        driver.close()
     driver.switch_to.window(driver.window_handles[0])
     driver.switch_to.new_window('tab')
     driver.get(url)
@@ -109,6 +154,7 @@ def collectEggs():
 # wait for server
 
 
+
 initBrowser()
 
 
@@ -124,24 +170,12 @@ print(f'connected to {host}:{port}')
 while True:
     # attempt to send and receive wave, otherwise reconnect
     try:
-        data = s.recv(20024)
+        data = s.recv(1024)
         data = data.decode()
         data = json.loads(data)
         LIVE = data['link']
         print(LIVE)
-        print(data["id"])
-        COOKIE = data['account']
-        if not FLAG:
-            loginUsingCookies()
         openLiveInNewTab(LIVE)
-
-        # while True:
-        #     if FLAG and len(driver.window_handles) == 1:
-        #         driver.switch_to.window(driver.window_handles[0])
-        #         responseToServer = f'done|{data["id"]}'
-        #         s.send(responseToServer.encode())
-        #         FLAG = False
-        #         break
     except socket.error:
         # set connection status and recreate socket
         connected = False

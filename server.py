@@ -291,11 +291,10 @@ def controlSocket():
     global all_clients
     while True:
         link = input("Link: ")
-        for index, c in enumerate(all_clients):
-            data = json.dumps({"id": ACCOUNTS[index]["id"], "link": link, "account": ACCOUNTS[index]["account"]})
+        for c in all_clients:
+            data = json.dumps({"link": link})
             data_encode = data.encode('utf-8')
             c.send(data_encode)
-            print(index)
 
 
 Thread(target=controlSocket).start()
@@ -316,5 +315,3 @@ while True:
     a = ("Welcome to server " + timestamp).encode()
     th.append(Thread(target=listener, args=(client, address)).start())
 s.close()
-
-
