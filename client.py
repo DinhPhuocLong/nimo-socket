@@ -151,6 +151,8 @@ def collectEggs():
             collectInterval = setInterval(function(){
                 const boxGift = document.querySelector('.nimo-box-gift__box');      
                 const collectBtn = document.querySelector('.nimo-box-gift__box__btn');
+                const redEgg = document.querySelector('.interactive-gift-entry-box-wrap');
+                if (redEgg) redEgg.click();
                 let isBoxGift = document.querySelector('.nimo-room__chatroom__box-gift-item');
                 if(!boxGift) window.close();
                 if(collectBtn) collectBtn.click();             
