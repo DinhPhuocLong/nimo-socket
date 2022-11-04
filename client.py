@@ -153,7 +153,20 @@ def collectEggs():
                 const collectBtn = document.querySelector('.nimo-box-gift__box__btn');
                 let isBoxGift = document.querySelector('.nimo-room__chatroom__box-gift-item');
                 if(!boxGift) window.close();
-                if(collectBtn) collectBtn.click();
+                if(collectBtn) collectBtn.click();             
+                const modal = document.querySelector('.act-interactive-gift-modal');
+                if (modal) {
+                    const iframe = modal.querySelector('iframe');
+                    if (iframe) {
+                      let innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+                        if(innerDoc) {
+                            let joinButton = innerDoc.querySelector('.btn');
+                                if(joinButton) {
+                                    joinButton.click();
+                            }
+                        }
+                    }
+                }
                 if(window.getComputedStyle(isBoxGift).display == 'none') window.close();
             }, 1);
         }
