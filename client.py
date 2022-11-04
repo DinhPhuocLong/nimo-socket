@@ -62,6 +62,14 @@ profile.set_preference("plugin.default_plugin_disabled", False)
 profile.set_preference("permissions.default.image", 2)  # Image load disabled again
 # Start the Firefox browser with custom settings
 driver = webdriver.Firefox(firefox_profile=profile)
+
+with open("config.json", 'r') as f:
+    data = json.load(f)
+    port = data["port"]
+    server = data["server"]
+    loadScript = data["load-script"]
+    tabQuantity = data["tab-quantity"]
+
 def initBrowser():
     driver.get("https://www.nimo.tv/lives")
     print('start browser...')
@@ -125,13 +133,13 @@ def loginUsingUsernamePassword():
 def openLiveInNewTab(url):
     global FLAG
     FLAG = True
-    if len(driver.window_handles) >= 3:
+    if len(driver.window_handles) >= int(tabQuantity):
         driver.switch_to.window(driver.window_handles[1])
         driver.close()
     driver.switch_to.window(driver.window_handles[0])
     driver.switch_to.new_window('tab')
     driver.get(url)
-    sleep(8)
+    sleep(int(loadScript))
     collectEggs()
 
 
@@ -143,9 +151,24 @@ def collectEggs():
             collectInterval = setInterval(function(){
                 const boxGift = document.querySelector('.nimo-box-gift__box');      
                 const collectBtn = document.querySelector('.nimo-box-gift__box__btn');
+                const redEgg = document.querySelector('.interactive-gift-entry-box-wrap');
+                if (redEgg) redEgg.click();
                 let isBoxGift = document.querySelector('.nimo-room__chatroom__box-gift-item');
                 if(!boxGift) window.close();
-                if(collectBtn) collectBtn.click();
+                if(collectBtn) collectBtn.click();             
+                const modal = document.querySelector('.act-interactive-gift-modal');
+                if (modal) {
+                    const iframe = modal.querySelector('iframe');
+                    if (iframe) {
+                      let innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+                        if(innerDoc) {
+                            let joinButton = innerDoc.querySelector('.btn');
+                                if(joinButton) {
+                                    joinButton.click();
+                            }
+                        }
+                    }
+                }
                 if(window.getComputedStyle(isBoxGift).display == 'none') window.close();
             }, 1);
         }
@@ -159,8 +182,8 @@ initBrowser()
 
 
 s = socket.socket()
-host = '103.21.52.123' #my server ip   103.178.234.58
-port = 9981  # Production port 9981
+host = server #my server ip   103.178.234.58
+port = port  # Production port 9981
 
 s.connect((host, port))
 connected = True
