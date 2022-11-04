@@ -149,12 +149,11 @@ def collectEggs():
             const button = document.querySelector('.pl-icon_danmu_open');
             if(button) button.click();
             collectInterval = setInterval(function(){
-                const boxGift = document.querySelector('.nimo-box-gift__box');      
                 const collectBtn = document.querySelector('.nimo-box-gift__box__btn');
                 const redEgg = document.querySelector('.interactive-gift-entry-box-wrap');
                 if (redEgg) redEgg.click();
                 let isBoxGift = document.querySelector('.nimo-room__chatroom__box-gift');
-                if(!boxGift) window.close();
+                if(!isBoxGift) window.close();
                 if(collectBtn) collectBtn.click();             
                 const modal = document.querySelector('.act-interactive-gift-modal');
                 if (modal) {
