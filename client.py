@@ -153,7 +153,7 @@ def collectEggs():
                 const collectBtn = document.querySelector('.nimo-box-gift__box__btn');
                 const redEgg = document.querySelector('.interactive-gift-entry-box-wrap');
                 if (redEgg) redEgg.click();
-                let isBoxGift = document.querySelector('.nimo-room__chatroom__box-gift-item');
+                let isBoxGift = document.querySelector('.nimo-room__chatroom__box-gift');
                 if(!boxGift) window.close();
                 if(collectBtn) collectBtn.click();             
                 const modal = document.querySelector('.act-interactive-gift-modal');
