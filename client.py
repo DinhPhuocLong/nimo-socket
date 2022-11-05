@@ -159,9 +159,9 @@ def collectEggs():
                 const nodeList = container.querySelectorAll('.nimo-room__chatroom__box-gift-item');
                 const nodeListToArray = [...nodeList];
                 const ifHasBoxgift = nodeListToArray.some(item => {
-                    const el = item.querySelector('.nimo-box-gift');
+                    const el = item.querySelector('.nimo-box-gift') || item.querySelector('.interactive-gift-entry-box-wrap');
                     if(el) {
-                      return window.getComputedStyle(el).display == 'block';
+                       return window.getComputedStyle(el).display == 'block' || window.getComputedStyle(el).display == 'flex'
                     }
                 })
                 if (!ifHasBoxgift) window.close();
