@@ -153,9 +153,18 @@ def collectEggs():
                 const redEgg = document.querySelector('.interactive-gift-entry-box-wrap');
                 if (redEgg) redEgg.click();
                 let isBoxGift = document.querySelector('.nimo-room__chatroom__box-gift');
-                if(!isBoxGift) window.close();
                 if(collectBtn) collectBtn.click();             
                 const modal = document.querySelector('.act-interactive-gift-modal');
+                const container = document.querySelector('.gift-entries-swiper');
+                const nodeList = container.querySelectorAll('.nimo-room__chatroom__box-gift-item');
+                const nodeListToArray = [...nodeList];
+                const ifHasBoxgift = nodeListToArray.some(item => {
+                    const el = item.querySelector('.nimo-box-gift');
+                    if(el) {
+                      return window.getComputedStyle(el).display == 'block';
+                    }
+                })
+                if (!ifHasBoxgift) window.close();
                 if (modal) {
                     const iframe = modal.querySelector('iframe');
                     if (iframe) {
@@ -168,7 +177,7 @@ def collectEggs():
                         }
                     }
                 }
-                if(window.getComputedStyle(isBoxGift).display == 'none') window.close();
+                
             }, 1);
         }
         collectEgg();
