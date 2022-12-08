@@ -140,6 +140,7 @@ def openLiveInNewTab(url):
     driver.switch_to.new_window('tab')
     try:
         driver.get(url)
+        print('-------------')
         sleep(int(loadScript))
         collectEggs()
     except:
@@ -147,6 +148,7 @@ def openLiveInNewTab(url):
 
 def collectEggs():
     driver.execute_script("""
+        console.log('loaded script===================')
         function collectEgg() {
             const button = document.querySelector('.pl-icon_danmu_open');
             if(button) button.click();
@@ -159,6 +161,7 @@ def collectEggs():
                 if(collectBtn) collectBtn.click();             
                 const modal = document.querySelector('.act-interactive-gift-modal');
                 const container = document.querySelector('.gift-entries-swiper');
+                if (!container) window.close();
                 const nodeList = container.querySelectorAll('.nimo-room__chatroom__box-gift-item');
                 const nodeListToArray = [...nodeList];
                 const ifHasBoxgift = nodeListToArray.some(item => {
