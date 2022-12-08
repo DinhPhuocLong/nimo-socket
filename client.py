@@ -138,16 +138,19 @@ def openLiveInNewTab(url):
         driver.close()
     driver.switch_to.window(driver.window_handles[0])
     driver.switch_to.new_window('tab')
-    driver.get(url)
-    sleep(int(loadScript))
-    collectEggs()
-
+    try:
+        driver.get(url)
+        sleep(int(loadScript))
+        collectEggs()
+    except:
+        driver.close()
 
 def collectEggs():
     driver.execute_script("""
         function collectEgg() {
             const button = document.querySelector('.pl-icon_danmu_open');
             if(button) button.click();
+            let flag = false;
             collectInterval = setInterval(function(){
                 const collectBtn = document.querySelector('.nimo-box-gift__box__btn');
                 const redEgg = document.querySelector('.interactive-gift-entry-box-wrap');
@@ -161,18 +164,23 @@ def collectEggs():
                 const ifHasBoxgift = nodeListToArray.some(item => {
                     const el = item.querySelector('.nimo-box-gift') || item.querySelector('.interactive-gift-entry-box-wrap');
                     if(el) {
-                       return window.getComputedStyle(el).display == 'block' || window.getComputedStyle(el).display == 'flex'
+                    return window.getComputedStyle(el).display == 'block' || window.getComputedStyle(el).display == 'flex'
                     }
                 })
                 if (!ifHasBoxgift) window.close();
                 if (modal) {
                     const iframe = modal.querySelector('iframe');
                     if (iframe) {
-                      let innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-                        if(innerDoc) {
+                    let innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+                        if(innerDoc && flag == true) {
                             let joinButton = innerDoc.querySelector('.btn');
                                 if(joinButton) {
                                     joinButton.click();
+                                    flag = false;
+                            }
+                            let result = document.querySelector('.ig-result');
+                            if (result) {
+                                flag = true;
                             }
                         }
                     }
@@ -221,4 +229,3 @@ while True:
             except socket.error:
                 print('re-connection failed - sleep 4 seconds')
                 sleep(4)
-s.close()

@@ -1,5 +1,5 @@
 {
-  "server": "103.180.136.205",
+  "server": "127.0.0.1",
   "port": 9981,
   "load-script": 15,
   "tab-quantity": 3
