@@ -24307,3 +24307,6 @@ JavaScript warning: https://www.nimo.tv/nms/lib/hydevice-1.0.8.js, line 1: WebGL
 1665914033827	Marionette	INFO	Stopped listening on port 63555
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
 [Parent 8688, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1679162866921	geckodriver	INFO	Listening on 127.0.0.1:58563
+1679162883581	geckodriver	INFO	Listening on 127.0.0.1:58614
+1679162945236	geckodriver	INFO	Listening on 127.0.0.1:58874

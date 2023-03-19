@@ -16,52 +16,11 @@ LIVE = None
 COOKIE = None
 FLAG = False
 
-# create a Firefox browser instance object Options
-profile = webdriver.FirefoxProfile()
-# disable CSS load
-profile.set_preference('permissions.default.stylesheet', 2)
-# disable images loading
-profile.set_preference('permissions.default.image', 2)
-# disable flash plug
-profile.set_preference('allow_scripts_to_close_windows', True)
-profile.set_preference('dom.allow_scripts_to_close_windows', True)
-profile.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', False)
-profile.set_preference("network.http.pipelining", True)
-profile.set_preference("network.http.proxy.pipelining", True)
-profile.set_preference("network.http.pipelining.maxrequests", 8)
-profile.set_preference("content.notify.interval", 500000)
-profile.set_preference("content.notify.ontimer", True)
-profile.set_preference("content.switch.threshold", 250000)
-profile.set_preference("browser.cache.memory.capacity", 65536)  # Increase the cache capacity.
-profile.set_preference("browser.startup.homepage", "about:blank")
-profile.set_preference("reader.parse-on-load.enabled", False)  # Disable reader, we won't need that.
-profile.set_preference("browser.pocket.enabled", False)  # Duck pocket too!
-profile.set_preference("loop.enabled", False)
-profile.set_preference("browser.chrome.toolbar_style", 1)  # Text on Toolbar instead of icons
-profile.set_preference("browser.display.show_image_placeholders",
-                       False)  # Don't show thumbnails on not loaded images.
-profile.set_preference("browser.display.use_document_colors", False)  # Don't show document colors.
-profile.set_preference("browser.display.use_document_fonts", 0)  # Don't load document fonts.
-profile.set_preference("browser.display.use_system_colors", True)  # Use system colors.
-profile.set_preference("browser.formfill.enable", False)  # Autofill on forms disabled.
-profile.set_preference("browser.helperApps.deleteTempFileOnExit", True)  # Delete temprorary files.
-profile.set_preference("browser.shell.checkDefaultBrowser", False)
-profile.set_preference("browser.startup.homepage", "about:blank")
-profile.set_preference("browser.startup.page", 0)  # blank
-profile.set_preference("browser.tabs.forceHide", True)  # Disable tabs, We won't need that.
-profile.set_preference("browser.urlbar.autoFill", False)  # Disable autofill on URL bar.
-profile.set_preference("browser.urlbar.autocomplete.enabled", False)  # Disable autocomplete on URL bar.
-profile.set_preference("browser.urlbar.showPopup", False)  # Disable list of URLs when typing on URL bar.
-profile.set_preference("browser.urlbar.showSearch", False)  # Disable search bar.
-profile.set_preference("extensions.checkCompatibility", False)  # Addon update disabled
-profile.set_preference("extensions.checkUpdateSecurity", False)
-profile.set_preference("extensions.update.autoUpdateEnabled", False)
-profile.set_preference("extensions.update.enabled", False)
-profile.set_preference("general.startup.browser", False)
-profile.set_preference("plugin.default_plugin_disabled", False)
-profile.set_preference("permissions.default.image", 2)  # Image load disabled again
-# Start the Firefox browser with custom settings
-driver = webdriver.Firefox(firefox_profile=profile)
+from selenium import webdriver
+
+# Khởi tạo driver
+driver = webdriver.Chrome('/chromedriver.exe')
+
 def initBrowser():
     driver.get("https://www.nimo.tv/lives")
     print('start browser...')
@@ -137,19 +96,87 @@ def openLiveInNewTab(url):
 
 def collectEggs():
     driver.execute_script("""
-        function collectEgg() {
-            const button = document.querySelector('.pl-icon_danmu_open');
-            if(button) button.click();
-            collectInterval = setInterval(function(){
-                const boxGift = document.querySelector('.nimo-box-gift__box');      
-                const collectBtn = document.querySelector('.nimo-box-gift__box__btn');
-                let isBoxGift = document.querySelector('.nimo-room__chatroom__box-gift-item');
-                if(!boxGift) window.close();
-                if(collectBtn) collectBtn.click();
-                if(window.getComputedStyle(isBoxGift).display == 'none') window.close();
-            }, 1);
+        var script = document.createElement('script');
+script.type = "text/javascript";
+script.integrity = "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=";
+script.crossOrigin = "anonymous";
+script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
+document.head.appendChild(script);
+
+
+//
+// Global variable
+//
+var clicked = 0;
+var hasSchedule = false;
+var clickingInterval = 0;
+var y = -1;
+
+function isLastEgg(jqueryObject) {
+    var openedEgg = y("img[src='https://img.nimo.tv/o/banner/CA1F83CD61A6CBB290299AB8B9448A9_kelingqu.png/w152_l0/img.png']");
+    var eggHasOpened = false;
+    if (openedEgg && openedEgg.length > 0) {
+        eggHasOpened = true;
+    }
+
+    var remainingEggCount = jqueryObject("sup[class='nimo-scroll-number nimo-badge-count nimo-badge-multiple-words']");
+    if (remainingEggCount && remainingEggCount.length > 0) {
+        return false;
+    }
+
+    return eggHasOpened;
+}
+
+setTimeout(function () {
+    y = $;
+
+    var x = setInterval(function () {
+        var remainingTime = y("div[class='nimo-box-gift__box__cd n-as-fs12']");
+        if (remainingTime.length !== 0 && !hasSchedule) {
+            var innerText = remainingTime[0].innerText;
+            var parts = innerText.split(":");
+            var minutePart = parseInt(parts[0]);
+            var secondPart = parseInt(parts[1]);
+            var totalSeconds = minutePart * 60 + secondPart;
+
+            hasSchedule = true;
+            console.log("setting up schedule");
+            setTimeout(function () {
+                clickingInterval = setInterval(function () {
+                    var egg = y("img[src='https://img.nimo.tv/o/banner/FA594DC3E0032D815464AD133760E769_daojishi.png/w152_l0/img.png']");
+                    var openedEgg = y("img[src='https://img.nimo.tv/o/banner/CA1F83CD61A6CBB290299AB8B9448A9_kelingqu.png/w152_l0/img.png']");
+
+                    if (openedEgg.length !== 0) {
+                        openedEgg[0].click();
+                        clicked += 1;
+                    }
+                    else if (egg.length !== 0) {
+                        egg[0].click();
+                        clicked += 1;
+                    }
+
+                    var button = y("button[class='nimo-btn nimo-btn-secondary nimo-btn-lg']");
+                    if (button.length !== 0) {
+                        button[0].click();
+                    }
+
+                    if (clicked > 15) {
+                        clearInterval(clickingInterval);
+                        clickingInterval = 0;
+                        clicked = 0;
+                        hasSchedule = false;
+                    }
+                }, 200);
+            }, totalSeconds * 1000 - 800);
         }
-        collectEgg();
+
+        // Try to click opened egg
+        var openedEgg = y("img[src='https://img.nimo.tv/o/banner/CA1F83CD61A6CBB290299AB8B9448A9_kelingqu.png/w152_l0/img.png']");
+        if (openedEgg && openedEgg.length !== 0) {
+            openedEgg.click();
+        }
+    }, 1000);
+}, 5000);
     """)
 # wait for server
 
